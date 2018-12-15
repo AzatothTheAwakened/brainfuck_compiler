@@ -1,0 +1,30 @@
+# Testfile for grammars
+test.txt
+
+#Maven generated files
+.classpath
+.project
+bin/
+target/
+.settings/
+dependency-reduced-pom.xml
+
+#Antlr generated files
+# src/main/antlr4/me/leslie/bfckjvmcompiler/.antlr
+.antlr/
+
+#IDE specific files
+#   VSCode
+.vscode/
+
+#Used external libraries
+lib/
+
+#Generated Jasmin files
+*.j
+
+#compiled code
+*.class
+
+#TestMain
+src/main/java/me/leslie/bfckjvmcompiler/AppTest.java
