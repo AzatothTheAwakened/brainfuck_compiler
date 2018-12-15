@@ -4,22 +4,18 @@ grammar Brainfuck;
     Parser
 */
 
-prog : statement+
-     | math
-     ;
+prog : statementlist;
 
-statement : LEFT #lshift
+statementlist : statement+;
+
+statement : INC #increase
+          | DEC #decrease
+          | LEFT #lshift
           | RIGHT #rshift
           | PUT #put
           | GET #get
-          | LOOPB statements=(statement|math)+ LOOPE #loop
+          | LOOPB statements=statementlist LOOPE #loop
           ;
-
-math : INC+ #increase
-     | DEC+ #decrease
-     ;
-
-
 
 /*
     Tokenizer
